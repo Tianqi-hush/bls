@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>hush · 辩论档案</title>
-<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。提供辩论赛规则、立论模板与备赛清单下载。">
+<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。提供辩论手卡资源下载。">
 <meta name="theme-color" content="#fff8f6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1a1110" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="hush · 辩论档案">
-<meta property="og:description" content="辩论赛资源下载：规则速查、一辩立论模板、备赛检查清单。">
+<meta property="og:description" content="辩论手卡资源下载：全国版四格手卡与 A4 打印版。">
 <meta property="og:url" content="https://bls.byhush.xyz/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%238c4a3c'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3E辩%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,44 +203,38 @@
   }
   .sec-head p{margin:0;color:var(--md-on-surface-variant);font-size:14px;line-height:22px;max-width:38ch}
 
-  /* ---------- bundle card ---------- */
-  .bundle{
+  /* ---------- download panel ---------- */
+  .download-panel{
+    background:var(--md-surface-container-low);border-radius:var(--radius-xl);
+    padding:clamp(24px,4.5vw,40px);box-shadow:var(--md-elev-1);
+  }
+  .download-top{display:flex;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  .download-icon{
+    width:64px;height:64px;border-radius:20px;flex:none;
     background:var(--md-primary-container);color:var(--md-on-primary-container);
-    border-radius:var(--radius-xl);padding:clamp(24px,4.5vw,40px);
-    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
-    margin-bottom:20px;
+    display:grid;place-items:center;
   }
-  .bundle h3{margin:0 0 8px;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;font-weight:500}
-  .bundle p{margin:0;font-size:14px;line-height:22px;opacity:.9;max-width:46ch}
-  .bundle-meta{
-    display:inline-flex;align-items:center;gap:6px;margin-top:14px;
-    font-size:12px;font-weight:500;letter-spacing:.6px;opacity:.8;
+  .download-icon svg{width:32px;height:32px}
+  .download-info{flex:1;min-width:200px}
+  .download-info h3{margin:0 0 8px;font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;font-weight:500}
+  .download-info p{margin:0 0 14px;font-size:14px;line-height:22px;color:var(--md-on-surface-variant);max-width:46ch}
+  .download-panel .md-btn.filled{height:48px;border-radius:24px;padding:0 28px}
+  .direct-link{
+    display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px;
+    padding:10px 12px 10px 16px;background:var(--md-surface-container-highest);border-radius:12px;
   }
-  .bundle .md-btn.filled{background:var(--md-primary);color:var(--md-on-primary);height:48px;border-radius:24px;padding:0 28px}
-
-  /* ---------- resource cards ---------- */
-  .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-  .card{
-    background:var(--md-surface-container-low);border-radius:var(--radius-md);
-    padding:24px;display:flex;flex-direction:column;
-    box-shadow:var(--md-elev-1);
-    transition:box-shadow .25s var(--ease-standard),transform .25s var(--ease-standard),background-color .25s;
+  .direct-label{
+    font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;
+    color:var(--md-primary);white-space:nowrap;
   }
-  .card:hover{box-shadow:var(--md-elev-2);transform:translateY(-2px)}
-  .card-icon{
-    width:48px;height:48px;border-radius:16px;margin-bottom:20px;
-    background:var(--md-secondary-container);color:var(--md-on-secondary-container);
-    display:grid;place-items:center;flex:none;
+  .direct-link code{
+    flex:1;min-width:200px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;line-height:18px;color:var(--md-on-surface-variant);word-break:break-all;
   }
-  .card-icon svg{width:24px;height:24px}
-  .card h3{margin:0 0 8px;font-size:18px;line-height:26px;font-weight:500;letter-spacing:.15px}
-  .card p{margin:0 0 20px;font-size:14px;line-height:22px;color:var(--md-on-surface-variant);flex:1;letter-spacing:.25px}
-  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .file-meta{font-size:12px;font-weight:500;letter-spacing:.6px;color:var(--md-on-surface-variant);text-transform:uppercase}
-  .card .md-btn.text{padding:0 10px;height:36px}
-  .alt-link{display:block;margin-top:10px;font-size:12px;color:var(--md-on-surface-variant);text-align:right}
-  .alt-link a{color:var(--md-primary);font-weight:500;border-radius:4px}
-  .alt-link a:hover{text-decoration:underline}
+  .direct-link .md-btn{height:32px;padding:0 12px;font-size:12px}
+  .mirror{margin:14px 0 0;font-size:12px;line-height:18px;color:var(--md-on-surface-variant)}
+  .mirror a{color:var(--md-primary);font-weight:500;border-radius:4px}
+  .mirror a:hover{text-decoration:underline}
 
   /* ---------- contact ---------- */
   .contact-card{
@@ -281,7 +275,6 @@
 
   /* ---------- responsive ---------- */
   @media (max-width:840px){
-    .cards{grid-template-columns:1fr 1fr}
     .hero-card{grid-template-columns:1fr}
     .hero-mark{display:none}
     .contact-card{grid-template-columns:1fr}
@@ -292,10 +285,9 @@
     .wrap{padding:0 16px}
     .brand-name small{display:none}
     .app-nav .md-btn{padding:0 10px;font-size:13px}
-    .cards{grid-template-columns:1fr}
     .hero-card{border-radius:24px}
     .hero-actions .md-btn{flex:1}
-    .bundle .md-btn.filled{width:100%}
+    .download-panel .md-btn.filled{width:100%}
     footer{flex-direction:column;gap:6px}
   }
   @media (prefers-reduced-motion:reduce){
@@ -337,7 +329,7 @@
           <div class="hero-actions">
             <a class="md-btn filled" href="#resources">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-              下载辩论资源
+              下载辩论手卡
             </a>
             <a class="md-btn outlined" href="#contact">联系我</a>
           </div>
@@ -352,70 +344,33 @@
           <span class="sec-kicker">Downloads</span>
           <h2 id="resources-title">资源下载</h2>
         </div>
-        <p>备赛用得上的模板与清单，全部免费取用。</p>
+        <p>一份可直接打印的辩论手卡，免费下载。</p>
       </div>
 
-      <div class="bundle" data-reveal>
-        <div>
-          <h3>辩论赛资源包</h3>
-          <p>规则速查、立论模板、备赛清单，三份 PDF 加一份可编辑文档，一次带走。</p>
-          <span class="bundle-meta">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2z"/></svg>
-            ZIP · 256 KB · 4 个文件
-          </span>
+      <div class="download-panel" data-reveal>
+        <div class="download-top">
+          <div class="download-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-8l-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2z"/></svg>
+          </div>
+          <div class="download-info">
+            <h3>辩论手卡</h3>
+            <p>全国版四格手卡与 A4 打印版，两份 PDF 打包成一个文件，下载后解压即用。</p>
+            <div class="chip-row">
+              <span class="chip tonal">ZIP · 2.1 MB</span>
+              <span class="chip">内含 2 个 PDF</span>
+            </div>
+          </div>
+          <a class="md-btn filled" href="downloads/debate-cards.zip" download="辩论手卡.zip">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+            直接下载
+          </a>
         </div>
-        <a class="md-btn filled" href="downloads/debate-kit.zip" download="辩论赛资源包.zip">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-          打包下载
-        </a>
-      </div>
-
-      <div class="cards">
-        <article class="card" data-reveal>
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 7V3.5L18.5 9H13zM7 13h10v2H7v-2zm0 4h10v2H7v-2z"/></svg>
-          </div>
-          <h3>赛制与流程速查</h3>
-          <p>发言顺序、常见环节、计时判罚与评分维度，一页看懂整场比赛。</p>
-          <div class="card-foot">
-            <span class="file-meta">PDF · 117 KB</span>
-            <a class="md-btn text" href="downloads/debate-format.pdf" download="辩论赛规则与流程速查.pdf">
-              下载
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="card" data-reveal data-delay="1">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-          </div>
-          <h3>一辩立论模板</h3>
-          <p>三分钟立论的结构与句式：定义、标准、论点、收束，替换内容即可使用。</p>
-          <div class="card-foot">
-            <span class="file-meta">PDF · 87 KB</span>
-            <a class="md-btn text" href="downloads/first-speaker-template.pdf" download="一辩立论模板.pdf">
-              下载
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-            </a>
-          </div>
-          <span class="alt-link">需要编辑？<a href="downloads/first-speaker-template.docx" download="一辩立论模板.docx">下载 DOCX</a></span>
-        </article>
-
-        <article class="card" data-reveal data-delay="2">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          </div>
-          <h3>备赛检查清单</h3>
-          <p>从赛前七天到上场前五分钟，把容易漏掉的事情逐项打勾。</p>
-          <div class="card-foot">
-            <span class="file-meta">PDF · 80 KB</span>
-            <a class="md-btn text" href="downloads/prep-checklist.pdf" download="备赛检查清单.pdf">
-              下载
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-            </a>
-          </div>
-        </article>
+        <div class="direct-link">
+          <span class="direct-label">直链</span>
+          <code id="directUrl">https://bls.byhush.xyz/downloads/debate-cards.zip</code>
+          <button class="md-btn text" id="copyLink" type="button">复制直链</button>
+        </div>
+        <p class="mirror">国内网络访问慢时，可改用 <a href="https://cdn.jsdelivr.net/gh/Tianqi-hush/bls@main/downloads/debate-cards.zip" target="_blank" rel="noopener noreferrer">jsDelivr 加速直链</a>。</p>
       </div>
     </section>
 
@@ -490,8 +445,7 @@
     });
   });
 
-  // 复制邮箱
-  const mailBtn = document.getElementById('copyMail');
+  // 复制文本
   const toast = document.getElementById('toast');
   const showToast = (msg) => {
     toast.textContent = msg;
@@ -499,17 +453,26 @@
     clearTimeout(showToast.t);
     showToast.t = setTimeout(() => toast.classList.remove('show'), 1900);
   };
-  mailBtn?.addEventListener('click', async () => {
-    const email = '1540975017@qq.com';
+  const copyText = async (text, msg) => {
     try {
-      await navigator.clipboard.writeText(email);
-      showToast('邮箱已复制');
+      await navigator.clipboard.writeText(text);
+      showToast(msg);
     } catch {
       const ta = document.createElement('textarea');
-      ta.value = email; document.body.appendChild(ta); ta.select();
+      ta.value = text; document.body.appendChild(ta); ta.select();
       document.execCommand('copy'); ta.remove();
-      showToast('邮箱已复制');
+      showToast(msg);
     }
+  };
+
+  document.getElementById('copyMail')?.addEventListener('click', () => {
+    copyText('1540975017@qq.com', '邮箱已复制');
+  });
+
+  const copyLink = document.getElementById('copyLink');
+  const directUrl = document.getElementById('directUrl');
+  copyLink?.addEventListener('click', () => {
+    copyText(directUrl.textContent.trim(), '直链已复制');
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
