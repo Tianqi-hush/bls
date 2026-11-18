@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>辩手姓名 · 辩论档案</title>
-<meta name="description" content="一名辩手的个人档案：简介、战绩、辩题立场与辩论风格。">
+<title>hush · 辩论档案</title>
+<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。简介、辩位、信条与联系方式。">
 <meta name="theme-color" content="#f1ece2">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="辩手姓名 · 辩论档案">
-<meta property="og:description" content="在有限的时间里，把话说清楚。">
+<meta property="og:title" content="hush · 辩论档案">
+<meta property="og:description" content="先把话说清楚，再把理讲明白。">
 <meta property="og:url" content="https://bls.byhush.xyz/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23b93c25'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23f1ece2' font-family='serif'%3E辩%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,8 +91,8 @@
   .eyebrow::before{content:"";width:44px;height:1px;background:var(--red)}
   .hero-title{margin:0;position:relative;z-index:2}
   .name-cn{
-    display:block;font-weight:900;font-size:clamp(4rem,11.5vw,10rem);line-height:.96;
-    letter-spacing:.02em;
+    display:block;font-family:var(--serif-en);font-weight:500;font-size:clamp(5rem,14vw,12rem);
+    line-height:.9;letter-spacing:-.03em;
   }
   .name-cn span{display:inline-block;transform:translateY(115%);animation:rise 1s var(--ease) forwards}
   .name-cn span:nth-child(1){animation-delay:.05s}
@@ -101,9 +101,9 @@
   .name-cn span:nth-child(4){animation-delay:.29s}
   @keyframes rise{to{transform:translateY(0)}}
   .name-latin{
-    display:block;font-family:var(--serif-en);font-weight:300;font-style:italic;
-    font-size:clamp(1rem,2.2vw,1.5rem);letter-spacing:.34em;color:var(--muted);
-    margin-top:18px;text-transform:uppercase;
+    display:block;font-family:var(--mono);font-weight:400;font-style:normal;
+    font-size:clamp(.85rem,1.5vw,1rem);letter-spacing:.22em;color:var(--muted);
+    margin-top:22px;text-transform:none;
   }
   .watermark{
     position:absolute;right:-2%;top:44%;transform:translateY(-50%);
@@ -187,20 +187,22 @@
   }
   .tags span:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
-  /* record table */
-  .record{width:100%;border-collapse:collapse;font-size:14.5px}
-  .record thead th{
-    font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.2em;color:var(--muted);
-    text-align:left;padding:0 16px 12px 0;border-bottom:1px solid var(--ink);text-transform:uppercase;
+  /* record note */
+  .record-note{
+    border:1px solid var(--ink);background:var(--paper-deep);
+    padding:clamp(26px,4.5vw,48px);display:grid;
+    grid-template-columns:minmax(96px,.3fr) minmax(0,1fr);
+    gap:clamp(22px,4vw,48px);align-items:center;
   }
-  .record tbody td{padding:19px 16px 19px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
-  .record tbody tr{transition:background .2s}
-  .record tbody tr:hover{background:rgba(21,20,15,.035)}
-  .record .year{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
-  .record .event{font-weight:600}
-  .record .event small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:3px}
-  .record .award{color:var(--red);font-weight:600;white-space:nowrap}
-  .record .award.is-dim{color:var(--muted);font-weight:400}
+  .record-note .stamp{
+    font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:900;line-height:1.3;
+    color:var(--red);border:2px solid var(--red);padding:16px 14px;
+    text-align:center;transform:rotate(-4deg);letter-spacing:.06em;white-space:nowrap;
+  }
+  .record-note h3{margin:0 0 12px;font-size:clamp(1.1rem,2vw,1.42rem);font-weight:600;letter-spacing:.02em}
+  .record-note p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.95;max-width:52ch}
+  .record-note p a{color:var(--ink);border-bottom:1px solid var(--red);transition:color .2s}
+  .record-note p a:hover{color:var(--red)}
 
   /* motions */
   .motions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
@@ -311,10 +313,8 @@
     .hero-meta{grid-template-columns:repeat(2,1fr)}
     .seal{display:none}
     .scroll-hint{display:none}
-    .record{font-size:13px}
-    .record thead th{padding-right:10px}
-    .record tbody td{padding:15px 10px 15px 0}
-    .record .event small{display:none}
+    .record-note{grid-template-columns:1fr;gap:22px}
+    .record-note .stamp{justify-self:start;transform:none}
     .contact-grid{grid-template-columns:1fr}
     .sec-head .en{display:none}
     .principles li{grid-template-columns:52px minmax(0,1fr)}
@@ -340,8 +340,8 @@
   <nav class="rail-nav" aria-label="页面导航">
     <a href="#about"><b>01</b>简介</a>
     <a href="#record"><b>02</b>战绩</a>
-    <a href="#motions"><b>03</b>辩题</a>
-    <a href="#style"><b>04</b>风格</a>
+    <a href="#role"><b>03</b>辩位</a>
+    <a href="#style"><b>04</b>信条</a>
     <a href="#contact"><b>05</b>联系</a>
   </nav>
   <div class="rail-foot">
@@ -356,15 +356,15 @@
     <div class="watermark" aria-hidden="true">辯</div>
     <p class="eyebrow">Case File / 辩手档案 · No.001</p>
     <h1 class="hero-title">
-      <span class="name-cn" aria-label="辩手姓名"><span>辩</span><span>手</span><span>姓</span><span>名</span></span>
-      <span class="name-latin">Debater · 四辩</span>
+      <span class="name-cn" aria-label="hush"><span>h</span><span>u</span><span>s</span><span>h</span></span>
+      <span class="name-latin">一辩 · 嘴硬辩论队 / FIRST SPEAKER</span>
     </h1>
-    <p class="tagline">在有限的时间里，<em>把话说清楚</em>。<br>相信逻辑，也相信逻辑之外的人。</p>
+    <p class="tagline">先把话说清楚，<em>再把理讲明白</em>。<br>一辩，负责让整场比赛从这里开始。</p>
     <div class="hero-meta">
-      <div><dt>辩位 / POSITION</dt><dd>四辩 · 结辩</dd></div>
-      <div><dt>队伍 / TEAM</dt><dd>XX大学辩论队</dd></div>
-      <div><dt>赛季 / SEASON</dt><dd>2023 — 2026</dd></div>
-      <div><dt>坐标 / BASE</dt><dd>中国 · 上海</dd></div>
+      <div><dt>辩位 / POSITION</dt><dd>一辩 · 立论</dd></div>
+      <div><dt>队伍 / TEAM</dt><dd>嘴硬 · 计网班</dd></div>
+      <div><dt>学校 / SCHOOL</dt><dd>广东省华立技师学院</dd></div>
+      <div><dt>坐标 / BASE</dt><dd>中国 · 广东</dd></div>
     </div>
     <div class="seal" aria-hidden="true">辩</div>
     <div class="scroll-hint" aria-hidden="true"><i></i>SCROLL TO READ</div>
@@ -384,16 +384,16 @@
     </div>
     <div class="about-grid">
       <div class="about-body" data-reveal>
-        <p>我是<strong>辩手姓名</strong>，XX大学辩论队四辩。从大一第一次站上赛场开始，辩论对我而言就不只是输赢，而是一种把复杂问题拆开、再重新拼好的方式。</p>
-        <p>我习惯在备赛时先写下对方的<strong>最强论证</strong>，再去寻找它真正的裂缝。赛场上我负责结辩，把一场比赛里散落的价值线索收拢成一句话，交还给评委和观众。</p>
-        <p>赛场之外，我关心公共表达、逻辑训练与青年议题，也在尝试把辩论里的思维方式，用到更日常的沟通中去。</p>
+        <p>我是 <strong>hush</strong>，广东省华立技师学院数字传媒学院计网班的学生，也是「嘴硬」辩论队的一辩。</p>
+        <p>一辩是一场辩论里第一个把框架摆上台面的人：<strong>定义议题、划定战场</strong>，把整支队伍要去的方向讲清楚。我喜欢这份工作——它要求你在开口之前，先把问题想明白。</p>
+        <p>目前我把更多时间放在训练和备赛上，比赛成绩暂不对外公开。如果你对某个辩题感兴趣，或者想约一场模辩，欢迎来信。</p>
         <div class="tags" aria-label="关键词">
-          <span># 价值辩</span><span># 政策辩</span><span># 结辩</span><span># 逻辑拆解</span><span># 公共表达</span>
+          <span># 一辩</span><span># 立论</span><span># 框架</span><span># 公共表达</span><span># 嘴硬</span>
         </div>
       </div>
       <aside class="quote-card" data-reveal data-delay="1">
-        <p>辩论不是说服对方，<br>而是让第三种可能被看见。</p>
-        <cite>— 备赛笔记 · 2025</cite>
+        <p>先把定义说清楚，<br>后面的争论才有意义。</p>
+        <cite>— hush · 一辩</cite>
       </aside>
     </div>
   </section>
@@ -403,85 +403,59 @@
       <h2><span class="num">02</span>战绩</h2>
       <span class="en">Record / Achievements</span>
     </div>
-    <div data-reveal>
-      <table class="record">
-        <thead>
-          <tr><th scope="col">年份</th><th scope="col">赛事</th><th scope="col">赛制</th><th scope="col">成绩</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="year">2026</td>
-            <td class="event">XX市大学生辩论联赛<small>春季赛 · 参赛队伍 32 支</small></td>
-            <td>四对四 · 华语</td>
-            <td class="award">冠军 · 最佳辩手</td>
-          </tr>
-          <tr>
-            <td class="year">2025</td>
-            <td class="event">XX高校辩论邀请赛<small>年度总决赛</small></td>
-            <td>四对四 · 华语</td>
-            <td class="award">亚军</td>
-          </tr>
-          <tr>
-            <td class="year">2025</td>
-            <td class="event">XX杯华语辩论公开赛<small>小组循环 + 淘汰赛</small></td>
-            <td>四对四 · 华语</td>
-            <td class="award is-dim">八强 · 单场最佳</td>
-          </tr>
-          <tr>
-            <td class="year">2024</td>
-            <td class="event">XX大学新生辩论赛<small>院系代表队</small></td>
-            <td>四对四 · 华语</td>
-            <td class="award is-dim">四强</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="record-note" data-reveal>
+      <div class="stamp">暂不<br>公开</div>
+      <div>
+        <h3>主要战绩暂不公开</h3>
+        <p>目前专注于训练与备赛，比赛记录会在合适的时候整理到这里。若需了解，欢迎<a href="mailto:1540975017@qq.com">来信交流</a>。</p>
+      </div>
     </div>
   </section>
 
-  <section id="motions">
+  <section id="role">
     <div class="sec-head">
-      <h2><span class="num">03</span>辩题</h2>
-      <span class="en">Motions / Stances</span>
+      <h2><span class="num">03</span>辩位</h2>
+      <span class="en">Role / First Speaker</span>
     </div>
     <div class="motions">
       <article class="motion" data-reveal>
-        <div class="motion-top"><span class="motion-id">MOTION 01</span><span class="stance">正方</span></div>
-        <h3>技术让辩论更接近真理</h3>
-        <p>当检索与模型降低了信息门槛，辩手的价值从「知道什么」转向「如何判断」。</p>
-        <div class="core"><b>CORE</b>工具放大理性，也放大偏见，关键在于谁掌握提问权。</div>
+        <div class="motion-top"><span class="motion-id">ROLE 01</span><span class="stance">定义</span></div>
+        <h3>这场比赛，究竟在争什么</h3>
+        <p>拆开关键词，划清边界，让对手和评委知道我们到底在讨论什么。</p>
+        <div class="core"><b>CORE</b>定义不清，后面的论证就无处落脚。</div>
       </article>
       <article class="motion" data-reveal data-delay="1">
-        <div class="motion-top"><span class="motion-id">MOTION 02</span><span class="stance con">反方</span></div>
-        <h3>公共讨论应当要求实名</h3>
-        <p>实名提升了个体责任感，却也可能让弱者失去最后一点安全表达的空间。</p>
-        <div class="core"><b>CORE</b>好的制度不是逼人勇敢，而是让怯懦也有发声的余地。</div>
+        <div class="motion-top"><span class="motion-id">ROLE 02</span><span class="stance con">框架</span></div>
+        <h3>把观点连成一条线</h3>
+        <p>立论不是名言的堆叠，而是一条能被追问、也能被复述的论证链。</p>
+        <div class="core"><b>CORE</b>结构先立住，细节才有意义。</div>
       </article>
       <article class="motion" data-reveal data-delay="2">
-        <div class="motion-top"><span class="motion-id">MOTION 03</span><span class="stance">正方</span></div>
-        <h3>过程比结果更能定义一场比赛</h3>
-        <p>比分只记录一次裁决，而论证的质量会在很长时间里继续影响选手与观众。</p>
-        <div class="core"><b>CORE</b>当胜负被遗忘，留下的才是辩论真正的遗产。</div>
+        <div class="motion-top"><span class="motion-id">ROLE 03</span><span class="stance">立论</span></div>
+        <h3>三分钟，把立场交出去</h3>
+        <p>语速可以慢，逻辑必须清楚。对一辩来说，清楚比漂亮更重要。</p>
+        <div class="core"><b>CORE</b>让没备过赛的人也能听懂。</div>
       </article>
     </div>
   </section>
 
   <section id="style">
     <div class="sec-head">
-      <h2><span class="num">04</span>风格</h2>
-      <span class="en">Method / Principles</span>
+      <h2><span class="num">04</span>信条</h2>
+      <span class="en">Principles / Method</span>
     </div>
     <ol class="principles">
       <li data-reveal>
         <span class="big-num">01</span>
-        <div><h3>先理解，再反驳</h3><p>在拆掉一个观点之前，先把它还原到最强的版本。稻草人赢得再多，也不会让论证变强。</p></div>
+        <div><h3>先把定义说清楚</h3><p>一场比赛的混乱，往往从概念含糊开始。名词解释不是形式，它决定了后面所有论证的落点。</p></div>
       </li>
       <li data-reveal data-delay="1">
         <span class="big-num">02</span>
-        <div><h3>把结构讲给外行听</h3><p>结辩不是术语的堆叠。如果一句话无法让没备过赛的人听懂，那它大概率也没有真正想清楚。</p></div>
+        <div><h3>框架比金句重要</h3><p>能被复述的逻辑，才有机会被记住。比起一句漂亮的表达，我更在意整条论证链是否站得住。</p></div>
       </li>
       <li data-reveal data-delay="2">
         <span class="big-num">03</span>
-        <div><h3>输赢之外留一句真话</h3><p>比赛会结束，比分会被遗忘，但赛场上那句诚实的判断，可能被某个人记很久。</p></div>
+        <div><h3>真诚是最后的技巧</h3><p>不必假装无所不知。承认边界、承认不确定，反而能让接下来的表达更有力量。</p></div>
       </li>
     </ol>
   </section>
@@ -493,15 +467,15 @@
     </div>
     <div class="contact-grid">
       <div data-reveal>
-        <a class="mail" href="mailto:hello@bls.byhush.xyz">hello@bls.byhush.xyz</a>
+        <a class="mail" href="mailto:1540975017@qq.com">1540975017@qq.com</a>
         <div class="contact-actions">
           <button class="btn red" id="copyMail" type="button">复制邮箱</button>
-          <a class="btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a class="btn" href="https://github.com/Tianqi-hush" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </div>
       <div class="contact-note" data-reveal data-delay="1">
         <b>欢迎交流</b>
-        辩论赛邀请、模辩、评审或单纯想聊聊某个辩题，都欢迎来信。<br>
+        模辩邀请、辩题讨论，或者只是想聊聊某场比赛，都欢迎来信。<br>
         本站托管于 GitHub Pages · <a href="https://bls.byhush.xyz" target="_blank" rel="noopener noreferrer">bls.byhush.xyz</a>
       </div>
     </div>
@@ -509,7 +483,7 @@
 </main>
 
 <footer>
-  <span>© <span id="year">2026</span> 辩手姓名 · Debate Archive</span>
+  <span>© <span id="year">2026</span> hush · Debate Archive</span>
   <span>BUILT WITH LOGIC &amp; COFFEE</span>
 </footer>
 
@@ -563,7 +537,7 @@
     showToast.t = setTimeout(() => toast.classList.remove('show'), 1900);
   };
   mailBtn?.addEventListener('click', async () => {
-    const email = 'hello@bls.byhush.xyz';
+    const email = '1540975017@qq.com';
     try {
       await navigator.clipboard.writeText(email);
       showToast('邮箱已复制');
