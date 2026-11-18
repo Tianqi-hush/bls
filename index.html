@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>hush · 辩论档案</title>
-<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。简介、辩位、信条与联系方式。">
+<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。个人简介与联系方式。">
 <meta name="theme-color" content="#f1ece2">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="hush · 辩论档案">
@@ -187,57 +187,6 @@
   }
   .tags span:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
-  /* record note */
-  .record-note{
-    border:1px solid var(--ink);background:var(--paper-deep);
-    padding:clamp(26px,4.5vw,48px);display:grid;
-    grid-template-columns:minmax(96px,.3fr) minmax(0,1fr);
-    gap:clamp(22px,4vw,48px);align-items:center;
-  }
-  .record-note .stamp{
-    font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:900;line-height:1.3;
-    color:var(--red);border:2px solid var(--red);padding:16px 14px;
-    text-align:center;transform:rotate(-4deg);letter-spacing:.06em;white-space:nowrap;
-  }
-  .record-note h3{margin:0 0 12px;font-size:clamp(1.1rem,2vw,1.42rem);font-weight:600;letter-spacing:.02em}
-  .record-note p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.95;max-width:52ch}
-  .record-note p a{color:var(--ink);border-bottom:1px solid var(--red);transition:color .2s}
-  .record-note p a:hover{color:var(--red)}
-
-  /* motions */
-  .motions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,22px)}
-  .motion{
-    border:1px solid var(--ink);padding:26px 24px 22px;display:flex;flex-direction:column;
-    background:var(--paper);transition:transform .3s var(--ease),box-shadow .3s var(--ease);
-    position:relative;min-height:270px;
-  }
-  .motion:hover{transform:translate(-5px,-5px);box-shadow:6px 6px 0 var(--ink)}
-  .motion-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
-  .motion-id{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--muted)}
-  .stance{
-    font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;padding:4px 9px;
-    border:1px solid currentColor;color:var(--red);
-  }
-  .stance.con{color:#3d5a4a;border-color:#3d5a4a}
-  .motion h3{margin:0 0 14px;font-size:clamp(1.12rem,1.7vw,1.34rem);font-weight:600;line-height:1.55}
-  .motion p{margin:0;font-size:13px;line-height:1.85;color:var(--muted);flex:1}
-  .motion .core{margin-top:20px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft)}
-  .motion .core b{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--red);font-weight:500;margin-right:8px}
-
-  /* principles */
-  .principles{list-style:none;margin:0;padding:0;display:grid;gap:0}
-  .principles li{
-    display:grid;grid-template-columns:88px minmax(0,1fr);gap:clamp(16px,3vw,40px);
-    padding:clamp(24px,3.4vw,34px) 0;border-top:1px solid var(--line);align-items:start;
-  }
-  .principles li:last-child{border-bottom:1px solid var(--line)}
-  .principles .big-num{
-    font-family:var(--serif-en);font-size:clamp(2rem,3.4vw,2.8rem);font-weight:300;
-    line-height:1;color:var(--line);font-variant-numeric:tabular-nums;
-  }
-  .principles h3{margin:0 0 8px;font-size:clamp(1.05rem,1.7vw,1.24rem);font-weight:600}
-  .principles p{margin:0;color:var(--muted);font-size:14.5px;max-width:52ch}
-
   /* contact */
   #contact{border-bottom:0}
   .contact-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:clamp(32px,6vw,72px);align-items:start}
@@ -303,8 +252,6 @@
     main{margin-left:0;padding-top:60px}
     .hero{padding-top:64px}
     footer{margin-left:0}
-    .motions{grid-template-columns:1fr}
-    .motion{min-height:0}
     .about-grid{grid-template-columns:1fr}
     .watermark{font-size:22rem;right:-8%}
   }
@@ -313,11 +260,8 @@
     .hero-meta{grid-template-columns:repeat(2,1fr)}
     .seal{display:none}
     .scroll-hint{display:none}
-    .record-note{grid-template-columns:1fr;gap:22px}
-    .record-note .stamp{justify-self:start;transform:none}
     .contact-grid{grid-template-columns:1fr}
     .sec-head .en{display:none}
-    .principles li{grid-template-columns:52px minmax(0,1fr)}
     .watermark{font-size:16rem;top:56%;right:-14%}
   }
   @media (prefers-reduced-motion:reduce){
@@ -339,10 +283,7 @@
   </a>
   <nav class="rail-nav" aria-label="页面导航">
     <a href="#about"><b>01</b>简介</a>
-    <a href="#record"><b>02</b>战绩</a>
-    <a href="#role"><b>03</b>辩位</a>
-    <a href="#style"><b>04</b>信条</a>
-    <a href="#contact"><b>05</b>联系</a>
+    <a href="#contact"><b>02</b>联系</a>
   </nav>
   <div class="rail-foot">
     <div class="line"></div>
@@ -386,7 +327,7 @@
       <div class="about-body" data-reveal>
         <p>我是 <strong>hush</strong>，广东省华立技师学院数字传媒学院计网班的学生，也是「嘴硬」辩论队的一辩。</p>
         <p>一辩是一场辩论里第一个把框架摆上台面的人：<strong>定义议题、划定战场</strong>，把整支队伍要去的方向讲清楚。我喜欢这份工作——它要求你在开口之前，先把问题想明白。</p>
-        <p>目前我把更多时间放在训练和备赛上，比赛成绩暂不对外公开。如果你对某个辩题感兴趣，或者想约一场模辩，欢迎来信。</p>
+        <p>目前我把更多时间放在训练和备赛上。如果你对某个辩题感兴趣，或者想约一场模辩，欢迎来信。</p>
         <div class="tags" aria-label="关键词">
           <span># 一辩</span><span># 立论</span><span># 框架</span><span># 公共表达</span><span># 嘴硬</span>
         </div>
@@ -398,71 +339,9 @@
     </div>
   </section>
 
-  <section id="record">
-    <div class="sec-head">
-      <h2><span class="num">02</span>战绩</h2>
-      <span class="en">Record / Achievements</span>
-    </div>
-    <div class="record-note" data-reveal>
-      <div class="stamp">暂不<br>公开</div>
-      <div>
-        <h3>主要战绩暂不公开</h3>
-        <p>目前专注于训练与备赛，比赛记录会在合适的时候整理到这里。若需了解，欢迎<a href="mailto:1540975017@qq.com">来信交流</a>。</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="role">
-    <div class="sec-head">
-      <h2><span class="num">03</span>辩位</h2>
-      <span class="en">Role / First Speaker</span>
-    </div>
-    <div class="motions">
-      <article class="motion" data-reveal>
-        <div class="motion-top"><span class="motion-id">ROLE 01</span><span class="stance">定义</span></div>
-        <h3>这场比赛，究竟在争什么</h3>
-        <p>拆开关键词，划清边界，让对手和评委知道我们到底在讨论什么。</p>
-        <div class="core"><b>CORE</b>定义不清，后面的论证就无处落脚。</div>
-      </article>
-      <article class="motion" data-reveal data-delay="1">
-        <div class="motion-top"><span class="motion-id">ROLE 02</span><span class="stance con">框架</span></div>
-        <h3>把观点连成一条线</h3>
-        <p>立论不是名言的堆叠，而是一条能被追问、也能被复述的论证链。</p>
-        <div class="core"><b>CORE</b>结构先立住，细节才有意义。</div>
-      </article>
-      <article class="motion" data-reveal data-delay="2">
-        <div class="motion-top"><span class="motion-id">ROLE 03</span><span class="stance">立论</span></div>
-        <h3>三分钟，把立场交出去</h3>
-        <p>语速可以慢，逻辑必须清楚。对一辩来说，清楚比漂亮更重要。</p>
-        <div class="core"><b>CORE</b>让没备过赛的人也能听懂。</div>
-      </article>
-    </div>
-  </section>
-
-  <section id="style">
-    <div class="sec-head">
-      <h2><span class="num">04</span>信条</h2>
-      <span class="en">Principles / Method</span>
-    </div>
-    <ol class="principles">
-      <li data-reveal>
-        <span class="big-num">01</span>
-        <div><h3>先把定义说清楚</h3><p>一场比赛的混乱，往往从概念含糊开始。名词解释不是形式，它决定了后面所有论证的落点。</p></div>
-      </li>
-      <li data-reveal data-delay="1">
-        <span class="big-num">02</span>
-        <div><h3>框架比金句重要</h3><p>能被复述的逻辑，才有机会被记住。比起一句漂亮的表达，我更在意整条论证链是否站得住。</p></div>
-      </li>
-      <li data-reveal data-delay="2">
-        <span class="big-num">03</span>
-        <div><h3>真诚是最后的技巧</h3><p>不必假装无所不知。承认边界、承认不确定，反而能让接下来的表达更有力量。</p></div>
-      </li>
-    </ol>
-  </section>
-
   <section id="contact">
     <div class="sec-head">
-      <h2><span class="num">05</span>联系</h2>
+      <h2><span class="num">02</span>联系</h2>
       <span class="en">Contact / Say Hi</span>
     </div>
     <div class="contact-grid">
