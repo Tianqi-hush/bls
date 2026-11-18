@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>hush · 辩论档案</title>
-<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。个人简介与联系方式。">
+<meta name="description" content="hush，广东省华立技师学院「嘴硬」辩论队一辩。联系方式。">
 <meta name="theme-color" content="#f1ece2">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="hush · 辩论档案">
@@ -164,29 +164,6 @@
   .sec-head h2 .num{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.18em;color:var(--red)}
   .sec-head .en{font-family:var(--mono);font-size:10px;letter-spacing:.24em;color:var(--muted);text-transform:uppercase;white-space:nowrap}
 
-  /* about */
-  .about-grid{display:grid;grid-template-columns:1.5fr .9fr;gap:clamp(32px,6vw,80px);align-items:start}
-  .about-body p{margin:0 0 1.35em;font-size:clamp(1rem,1.5vw,1.08rem);color:var(--ink-soft)}
-  .about-body p:first-child::first-letter{
-    float:left;font-size:3.6em;line-height:.82;font-weight:900;color:var(--red);
-    margin:.06em .12em 0 0;
-  }
-  .about-body strong{font-weight:600;color:var(--ink);background:linear-gradient(transparent 68%,rgba(185,60,37,.18) 68%)}
-  .quote-card{
-    border:1px solid var(--ink);padding:clamp(22px,3vw,32px);position:relative;
-    background:var(--paper-deep);
-  }
-  .quote-card::before{content:"“";font-family:var(--serif-en);font-size:78px;line-height:1;color:var(--red);display:block;margin:-14px 0 6px}
-  .quote-card p{margin:0;font-size:clamp(1.05rem,1.8vw,1.2rem);line-height:1.9;font-weight:600;letter-spacing:.01em}
-  .quote-card cite{display:block;margin-top:18px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--muted);font-style:normal}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
-  .tags span{
-    font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:7px 12px;
-    border:1px solid var(--line);color:var(--ink-soft);background:transparent;
-    transition:background .25s,color .25s,border-color .25s;
-  }
-  .tags span:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-
   /* contact */
   #contact{border-bottom:0}
   .contact-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:clamp(32px,6vw,72px);align-items:start}
@@ -252,7 +229,6 @@
     main{margin-left:0;padding-top:60px}
     .hero{padding-top:64px}
     footer{margin-left:0}
-    .about-grid{grid-template-columns:1fr}
     .watermark{font-size:22rem;right:-8%}
   }
   @media (max-width:720px){
@@ -282,8 +258,7 @@
     <small>DEBATE<br>ARCHIVE</small>
   </a>
   <nav class="rail-nav" aria-label="页面导航">
-    <a href="#about"><b>01</b>简介</a>
-    <a href="#contact"><b>02</b>联系</a>
+    <a href="#contact"><b>01</b>联系</a>
   </nav>
   <div class="rail-foot">
     <div class="line"></div>
@@ -318,30 +293,9 @@
     </div>
   </div>
 
-  <section id="about">
-    <div class="sec-head">
-      <h2><span class="num">01</span>简介</h2>
-      <span class="en">About / Profile</span>
-    </div>
-    <div class="about-grid">
-      <div class="about-body" data-reveal>
-        <p>我是 <strong>hush</strong>，广东省华立技师学院数字传媒学院计网班的学生，也是「嘴硬」辩论队的一辩。</p>
-        <p>一辩是一场辩论里第一个把框架摆上台面的人：<strong>定义议题、划定战场</strong>，把整支队伍要去的方向讲清楚。我喜欢这份工作——它要求你在开口之前，先把问题想明白。</p>
-        <p>目前我把更多时间放在训练和备赛上。如果你对某个辩题感兴趣，或者想约一场模辩，欢迎来信。</p>
-        <div class="tags" aria-label="关键词">
-          <span># 一辩</span><span># 立论</span><span># 框架</span><span># 公共表达</span><span># 嘴硬</span>
-        </div>
-      </div>
-      <aside class="quote-card" data-reveal data-delay="1">
-        <p>先把定义说清楚，<br>后面的争论才有意义。</p>
-        <cite>— hush · 一辩</cite>
-      </aside>
-    </div>
-  </section>
-
   <section id="contact">
     <div class="sec-head">
-      <h2><span class="num">02</span>联系</h2>
+      <h2><span class="num">01</span>联系</h2>
       <span class="en">Contact / Say Hi</span>
     </div>
     <div class="contact-grid">
